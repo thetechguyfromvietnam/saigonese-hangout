@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Logo + Description */}
         <div>
           <img
-            src="src/assets/images/logo.png"
+            src="/images/logo.png"
             alt="Saigonese Hang-out Logo"
             className="w-14 h-14 mb-3 rounded-lg object-cover"
           />
@@ -46,9 +46,9 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-3 text-base">Payments are secured</h3>
           <div className="flex gap-2 items-center">
-            <img src="src/assets/visa.png" alt="Visa" className="w-10 h-auto" />
-            <img src="src/assets/mastercard.png" alt="MasterCard" className="w-10 h-auto" />
-            <img src="src/assets/paypal.png" alt="PayPal" className="w-14 h-auto" />
+            <img src="/assets/visa.png" alt="Visa" className="w-10 h-auto" />
+            <img src="/assets/mastercard.png" alt="MasterCard" className="w-10 h-auto" />
+            <img src="/assets/paypal.png" alt="PayPal" className="w-14 h-auto" />
           </div>
         </div>
 

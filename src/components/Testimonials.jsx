@@ -5,10 +5,10 @@ const Testimonials = ({ theme }) => {
   const isMorning = theme === "morning";
 
   const reviews = [
-    { img: "src/assets/images/reviews/review1.jpg", alt: "Customer review 1" },
-    { img: "src/assets/images/reviews/review2.jpg", alt: "Customer review 2" },
-    { img: "src/assets/images/reviews/review3.jpg", alt: "Customer review 3" },
-    { img: "src/assets/images/reviews/review4.jpg", alt: "Customer review 4" },
+    { img: "/images/reviews/review1.jpg", alt: "Customer review 1" },
+    { img: "/images/reviews/review2.jpg", alt: "Customer review 2" },
+    { img: "/images/reviews/review3.jpg", alt: "Customer review 3" },
+    { img: "/images/reviews/review4.jpg", alt: "Customer review 4" },
   ];
 
   return (

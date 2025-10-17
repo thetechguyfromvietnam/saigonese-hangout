@@ -1,5 +1,5 @@
 import Footer from "../components/Footer.jsx";
-import qrContact from "../assets/images/qr-contact.jpg";
+// QR contact image is now in public folder, referenced directly
 
 const Contact = () => {
   return (
@@ -13,7 +13,7 @@ const Contact = () => {
         {/* QR Code */}
         <div className="mb-10">
           <img
-            src={qrContact}
+            src="/images/qr-contact.jpg"
             alt="WhatsApp QR - Saigonese Hang-out"
             className="w-64 h-64 md:w-80 md:h-80 object-contain shadow-lg rounded-xl border border-gray-200"
           />

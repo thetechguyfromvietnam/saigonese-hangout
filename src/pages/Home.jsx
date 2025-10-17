@@ -11,19 +11,19 @@ const Home = ({ theme }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const morningImages = [
-    "src/assets/images/morning-tours/0.jpg",
-    "src/assets/images/morning-tours/1.jpg",
-    "src/assets/images/morning-tours/2.jpg",
-    "src/assets/images/morning-tours/3.jpg",
-    "src/assets/images/morning-tours/4.jpg"
+    "/images/morning-tours/0.jpg",
+    "/images/morning-tours/1.jpg",
+    "/images/morning-tours/2.jpg",
+    "/images/morning-tours/3.jpg",
+    "/images/morning-tours/4.jpg"
   ];
 
   const nightImages = [
-    "src/assets/images/night-tours/1.jpg",
-    "src/assets/images/night-tours/2.jpg",
-    "src/assets/images/night-tours/3.jpg",
-    "src/assets/images/night-tours/4.jpg",
-    "src/assets/images/night-tours/5.jpg",
+    "/images/night-tours/1.jpg",
+    "/images/night-tours/2.jpg",
+    "/images/night-tours/3.jpg",
+    "/images/night-tours/4.jpg",
+    "/images/night-tours/5.jpg",
   ];
 
   const bgImages = isMorning ? morningImages : nightImages;
@@ -45,13 +45,13 @@ const Home = ({ theme }) => {
         {
           title: "History Tour",
           desc: "Learn about the history and culture life of Sài Gòn.",
-          img: "src/assets/images/morning-tours/history-tour/background.jpg",
+          img: "/images/morning-tours/history-tour/background.jpg",
           slug: "history",
         },
         {
           title: "Coffee & Market",
           desc: "Taste Vietnamese coffee and explore hidden markets to try tropical fruits.",
-          img: "src/assets/images/morning-tours/coffee-market-tour/background.jpg",
+          img: "/images/morning-tours/coffee-market-tour/background.jpg",
           slug: "coffee",
         },
       ]
@@ -59,13 +59,13 @@ const Home = ({ theme }) => {
         {
           title: "Street Food Tour",
           desc: "Taste authentic Saigonese dishes in neon-lit alleys.",
-          img: "src/assets/images/night-tours/street-food-tour/munchies-bg.jpg",
+          img: "/images/night-tours/street-food-tour/munchies-bg.jpg",
           slug: "food",
         },
         {
           title: "Night-Life Tour",
           desc: "Drinking, Bar, Karaoke, Club",
-          img: "src/assets/images/night-tours/night-life-tour.jpg",
+          img: "/images/night-tours/night-life-tour.jpg",
           slug: "nightlife",
         },
       ];

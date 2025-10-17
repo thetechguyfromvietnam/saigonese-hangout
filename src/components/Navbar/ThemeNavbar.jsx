@@ -9,7 +9,7 @@ const ThemeNavbar = ({ theme, setTheme }) => {
       {/* Logo */}
       <div className="flex items-center gap-3">
         <img
-          src="src/assets/images/logo.png"
+          src="/images/logo.png"
           alt="Saigonese Hang-out Logo"
           className="w-11 h-9 rounded-full object-cover"
         />

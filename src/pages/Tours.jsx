@@ -14,7 +14,7 @@ const Tours = ({ theme }) => {
           duration: "3-4 hours",
           price: "From $25",
           highlights: ["Independence Palace", "War Remnants Museum", "Notre Dame Cathedral", "Central Post Office"],
-          image: "src/assets/images/morning-tours/history-tour/background.jpg",
+          image: "/images/morning-tours/history-tour/background.jpg",
           slug: "history",
           options: ["Basic", "Premium"]
         },
@@ -24,7 +24,7 @@ const Tours = ({ theme }) => {
           duration: "2-3 hours", 
           price: "From $20",
           highlights: ["Local Coffee Shops", "Ben Thanh Market", "Tropical Fruits", "Coffee Tasting"],
-          image: "src/assets/images/morning-tours/coffee-market-tour/background.jpg",
+          image: "/images/morning-tours/coffee-market-tour/background.jpg",
           slug: "coffee",
           options: ["Basic", "Premium"]
         },
@@ -39,7 +39,7 @@ const Tours = ({ theme }) => {
           duration: "2-3 hours",
           price: "From $25",
           highlights: ["Pho", "Banh Mi", "Spring Rolls", "Local Desserts"],
-          image: "src/assets/images/night-tours/street-food-tour/munchies-bg.jpg",
+          image: "/images/night-tours/street-food-tour/munchies-bg.jpg",
           slug: "food",
           options: ["Basic", "Premium"]
         },
@@ -49,7 +49,7 @@ const Tours = ({ theme }) => {
           duration: "4-6 hours",
           price: "From $30",
           highlights: ["Rooftop Bars", "Nightclubs", "Live Music", "Karaoke"],
-          image: "src/assets/images/night-tours/night-life-tour.jpg",
+          image: "/images/night-tours/night-life-tour.jpg",
           slug: "nightlife",
           options: ["Basic", "Premium"]
         },
@@ -64,7 +64,7 @@ const Tours = ({ theme }) => {
           duration: "4-5 hours",
           price: "From $35",
           highlights: ["Golden Hour Shots", "Street Photography", "Architecture", "Local Life"],
-          image: "src/assets/images/morning-tours/morning-background.jpg",
+          image: "/images/morning-tours/morning-background.jpg",
           slug: "photography",
           options: ["Basic", "Premium"]
         },
@@ -74,7 +74,7 @@ const Tours = ({ theme }) => {
           duration: "6-8 hours",
           price: "From $45",
           highlights: ["Motorcycle Adventure", "Cu Chi Tunnels", "War History", "Underground Exploration"],
-          image: "src/assets/images/morning-tours/history-tour/background.jpg",
+          image: "/images/morning-tours/history-tour/background.jpg",
           slug: "cu-chi-motorcycle",
           options: ["Basic", "Premium"]
         }
