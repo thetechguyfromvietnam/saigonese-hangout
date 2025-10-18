@@ -74,13 +74,18 @@ const Home = ({ theme }) => {
     <>
       {/* Hero Section with Auto Slideshow */}
       <section className="relative w-full h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[85vh] overflow-hidden">
-        {/* Background Images */}
-        <div 
-          className="absolute inset-0 bg-center bg-cover transition-all duration-1000 ease-in-out"
-          style={{
-            backgroundImage: `url(${currentBgImage})`,
-          }}
-        />
+        {/* Background Images with Smooth Transitions */}
+        {bgImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-center bg-cover transition-opacity duration-1000 ease-in-out ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+          />
+        ))}
         
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20" />
