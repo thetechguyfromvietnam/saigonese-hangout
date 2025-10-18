@@ -31,17 +31,17 @@ const TourNavbar = ({ theme }) => {
 
   return (
     <nav
-      className={`fixed top-14 left-0 w-full py-3 z-40 backdrop-blur-md ${
+      className={`fixed top-16 sm:top-14 md:top-14 left-0 w-full py-2 sm:py-3 z-40 backdrop-blur-md ${
         isMorning
           ? "bg-yellow-100/80 text-[#0f3e2c]"
           : "bg-[#0b0b14]/90 text-white"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4">
         {/* Unlock Tips Section */}
-        <div className="text-center mb-3">
+        <div className="text-center mb-2 sm:mb-3">
           <span
-            className={`text-lg font-bold ${
+            className={`text-xs sm:text-sm md:text-lg font-bold ${
               isMorning ? "text-[#0f3e2c]" : "text-[#4cc9f0]"
             }`}
           >
@@ -50,12 +50,12 @@ const TourNavbar = ({ theme }) => {
         </div>
 
         {/* Tip Categories */}
-        <div className="flex justify-center gap-3 flex-wrap">
+        <div className="flex justify-center gap-1 sm:gap-2 md:gap-3 flex-wrap">
           {tipCategories.map((category) => (
             <button
               key={category.name}
               onClick={() => handleTipClick(category)}
-              className={`px-4 py-3 rounded-full text-sm font-medium border transition-all duration-300 shadow-sm hover:scale-105 ${
+              className={`px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-3 rounded-full text-xs sm:text-sm font-medium border transition-all duration-300 shadow-sm hover:scale-105 ${
                 isMorning
                   ? "border-[#c2a46b] bg-white/50 hover:bg-[#c2a46b] hover:text-white"
                   : "border-[#ffcd3c] bg-white/10 hover:bg-[#ffcd3c] hover:text-[#0b0b14]"

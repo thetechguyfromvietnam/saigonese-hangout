@@ -60,12 +60,12 @@ const Home = ({ theme }) => {
           title: "Street Food Tour",
           desc: "Taste authentic Saigonese dishes in neon-lit alleys.",
           img: "/images/night-tours/street-food-tour/munchies-bg.jpg",
-          slug: "food",
+          slug: "streetfood",
         },
         {
           title: "Night-Life Tour",
           desc: "Drinking, Bar, Karaoke, Club",
-          img: "/images/night-tours/night-life-tour.jpg",
+          img: "/images/night-tours/night-life-tour/night-life-tour.jpg",
           slug: "nightlife",
         },
       ];
@@ -73,7 +73,7 @@ const Home = ({ theme }) => {
   return (
     <>
       {/* Hero Section with Auto Slideshow */}
-      <section className="relative w-full h-[85vh] overflow-hidden">
+      <section className="relative w-full h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[85vh] overflow-hidden">
         {/* Background Images */}
         <div 
           className="absolute inset-0 bg-center bg-cover transition-all duration-1000 ease-in-out"
@@ -86,12 +86,12 @@ const Home = ({ theme }) => {
         <div className="absolute inset-0 bg-black/20" />
 
         {/* Slideshow Indicators */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
           {bgImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                 index === currentImageIndex
                   ? isMorning
                     ? "bg-white shadow-lg scale-125"
@@ -103,16 +103,16 @@ const Home = ({ theme }) => {
         </div>
 
         {/* Content */}
-        <div className="relative h-full flex items-center justify-center z-10">
+        <div className="relative h-full flex items-center justify-center z-10 px-4 sm:px-6">
           <div
-            className={`relative px-10 py-6 rounded-2xl shadow-lg max-w-xl mx-auto text-center transition-all duration-500 ${
+            className={`relative px-6 py-4 sm:px-8 sm:py-5 md:px-10 md:py-6 rounded-xl sm:rounded-2xl shadow-lg max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl mx-auto text-center transition-all duration-500 ${
               isMorning
                 ? "bg-white/85 text-black backdrop-blur-sm"
                 : "bg-white/10 text-white border border-white/20 backdrop-blur-md"
             }`}
           >
             <h2
-              className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-3 ${
+              className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 sm:mb-3 ${
                 isMorning ? "text-black" : "text-white"
               }`}
             >
@@ -120,7 +120,7 @@ const Home = ({ theme }) => {
             </h2>
 
             <p
-              className={`text-lg md:text-xl ${
+              className={`text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed ${
                 isMorning ? "text-[#333]" : "text-gray-200"
               }`}
             >
@@ -134,8 +134,8 @@ const Home = ({ theme }) => {
 
 
       {/* Tour Cards */}
-      <section className="max-w-6xl mx-auto text-center py-16 px-4 fade-in">
-        <div className="grid md:grid-cols-2 gap-6">
+      <section className="max-w-6xl mx-auto text-center py-12 sm:py-16 px-4 sm:px-6 fade-in">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {tours.map((tour) => (
             <TourCard key={tour.title} {...tour} theme={theme} />
           ))}

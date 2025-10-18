@@ -13,12 +13,12 @@ const Testimonials = ({ theme }) => {
 
   return (
     <section
-      className={`py-20 px-6 md:px-16 text-center transition-all duration-700 ${
+      className={`py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-16 text-center transition-all duration-700 ${
         isMorning ? "bg-[#f9f9f9] text-gray-800" : "bg-[#0b0b14] text-white"
       }`}
     >
       <h2
-        className={`text-4xl font-bold mb-6 ${
+        className={`text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 ${
           isMorning ? "text-[#0f3e2c]" : "text-[#4cc9f0]"
         }`}
       >
@@ -26,7 +26,7 @@ const Testimonials = ({ theme }) => {
       </h2>
 
       <p
-        className={`mb-10 max-w-2xl mx-auto ${
+        className={`mb-8 sm:mb-10 max-w-2xl mx-auto text-sm sm:text-base ${
           isMorning ? "text-gray-600" : "text-gray-300"
         }`}
       >
@@ -35,11 +35,11 @@ const Testimonials = ({ theme }) => {
       </p>
 
       {/* Review Images */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
         {reviews.map((r, i) => (
           <div
             key={i}
-            className={`overflow-hidden rounded-xl shadow-md hover:scale-105 transition-transform ${
+            className={`overflow-hidden rounded-lg sm:rounded-xl shadow-md hover:scale-105 transition-transform ${
               isMorning ? "bg-white" : "bg-white/10 border border-white/10"
             }`}
           >
@@ -53,10 +53,10 @@ const Testimonials = ({ theme }) => {
       </div>
 
       {/* See More Button */}
-      <div className="mt-10">
+      <div className="mt-8 sm:mt-10">
         <Link
           to="/reviews"
-          className={`inline-block font-semibold px-6 py-3 rounded-lg transition ${
+          className={`inline-block font-semibold px-5 sm:px-6 py-2 sm:py-3 rounded-lg transition text-sm sm:text-base ${
             isMorning
               ? "bg-[#0f3e2c] text-white hover:bg-[#14503a]"
               : "bg-gradient-to-r from-[#4361ee] to-[#4cc9f0] text-white hover:opacity-90"
@@ -67,7 +67,7 @@ const Testimonials = ({ theme }) => {
       </div>
 
       <p
-        className={`mt-6 text-sm ${
+        className={`mt-4 sm:mt-6 text-xs sm:text-sm ${
           isMorning ? "text-gray-500" : "text-gray-400"
         }`}
       >

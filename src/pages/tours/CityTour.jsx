@@ -2,10 +2,10 @@ import Navbar from "../../components/Navbar/TourNavbar.jsx";
 import Hero from "../../components/Hero.jsx";
 import Footer from "../../components/Footer.jsx";
 
-const CityTour = () => {
+const CityTour = ({ theme }) => {
   return (
     <div className="bg-white text-gray-800">
-      <Navbar />
+      <Navbar theme={theme} />
       <Hero
         title="City Tour"
         subtitle="🟡 Add overview text for City Tour here"

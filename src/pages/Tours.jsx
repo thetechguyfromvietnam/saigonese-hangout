@@ -66,7 +66,7 @@ const Tours = ({ theme }) => {
           highlights: ["Golden Hour Shots", "Street Photography", "Architecture", "Local Life"],
           image: "/images/morning-tours/morning-background.jpg",
           slug: "photography",
-          options: ["Basic", "Premium"]
+          options: ["Book Now"]
         },
         {
           title: "Cu Chi Tunnel on Motorcycle",
@@ -76,21 +76,21 @@ const Tours = ({ theme }) => {
           highlights: ["Motorcycle Adventure", "Cu Chi Tunnels", "War History", "Underground Exploration"],
           image: "/images/morning-tours/history-tour/background.jpg",
           slug: "cu-chi-motorcycle",
-          options: ["Basic", "Premium"]
+          options: ["Book Now"]
         }
       ]
     }
   ];
 
   return (
-    <div className="min-h-screen pt-28">
+    <div className="min-h-screen pt-20 sm:pt-24 md:pt-28">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] bg-gradient-to-br from-[#fffaf4] to-[#f0e6d2] flex items-center justify-center">
-        <div className="text-center px-6">
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 text-[#0f3e2c]">
+      <section className="relative w-full h-[50vh] sm:h-[55vh] md:h-[60vh] bg-gradient-to-br from-[#fffaf4] to-[#f0e6d2] flex items-center justify-center">
+        <div className="text-center px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 text-[#0f3e2c]">
             All <span className="text-[#c2a46b]">Tours</span>
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-gray-700">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed text-gray-700">
             Discover Saigon with our amazing tour collection! 
             From morning explorations to night adventures - we have the perfect tour for every traveler! 🇻🇳
           </p>
@@ -98,36 +98,36 @@ const Tours = ({ theme }) => {
       </section>
 
       {/* Tours Content */}
-      <section className="py-20 px-6 md:px-16 bg-[#fffaf4] text-gray-800">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-16 bg-[#fffaf4] text-gray-800">
         <div className="max-w-6xl mx-auto">
           {/* Introduction */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#0f3e2c]">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#0f3e2c]">
               Explore Saigon Your Way
             </h2>
-            <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-gray-700">
+            <p className="text-base sm:text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-gray-700">
               Choose from our carefully curated collection of tours. Each experience is designed to show you the real Saigon - 
               authentic, vibrant, and unforgettable.
             </p>
           </div>
 
           {/* Tours Grid */}
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-10 md:space-y-12">
             {tours.map((category, categoryIndex) => (
               <div key={categoryIndex}>
                 <h3
-                  className={`text-3xl font-bold mb-8 text-center ${
+                  className={`text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center ${
                     isMorning ? "text-[#0f3e2c]" : "text-[#ffcd3c]"
                   }`}
                 >
                   {category.category}
                 </h3>
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 justify-items-center">
                   {category.tours.map((tour, tourIndex) => (
                     <div
                       key={tourIndex}
-                      className={`rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] ${
+                      className={`rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] w-full max-w-md ${
                         isMorning
                           ? "bg-white border border-gray-100"
                           : "bg-white/10 border border-white/20 backdrop-blur-sm"
@@ -143,9 +143,9 @@ const Tours = ({ theme }) => {
                       </div>
                       
                       {/* Tour Content */}
-                      <div className="p-6">
+                      <div className="p-4 sm:p-6">
                         <h4
-                          className={`text-xl font-bold mb-3 ${
+                          className={`text-lg sm:text-xl font-bold mb-2 sm:mb-3 ${
                             isMorning ? "text-[#0f3e2c]" : "text-white"
                           }`}
                         >
@@ -153,7 +153,7 @@ const Tours = ({ theme }) => {
                         </h4>
                         
                         <p
-                          className={`text-sm mb-4 leading-relaxed ${
+                          className={`text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed ${
                             isMorning ? "text-gray-700" : "text-gray-300"
                           }`}
                         >
@@ -161,7 +161,7 @@ const Tours = ({ theme }) => {
                         </p>
 
                         {/* Tour Details */}
-                        <div className="grid grid-cols-2 gap-4 mb-4">
+                        <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
                           <div>
                             <span
                               className={`text-xs font-semibold ${
@@ -197,7 +197,7 @@ const Tours = ({ theme }) => {
                         </div>
 
                         {/* Highlights */}
-                        <div className="mb-6">
+                        <div className="mb-4 sm:mb-6">
                           <span
                             className={`text-xs font-semibold block mb-2 ${
                               isMorning ? "text-[#0f3e2c]" : "text-[#4cc9f0]"
@@ -205,7 +205,7 @@ const Tours = ({ theme }) => {
                           >
                             ✨ Highlights
                           </span>
-                          <div className="flex flex-wrap gap-1">
+                          <div className="flex flex-wrap gap-1 sm:gap-2">
                             {tour.highlights.map((highlight, index) => (
                               <span
                                 key={index}
@@ -235,6 +235,18 @@ const Tours = ({ theme }) => {
                                   window.location.href = option.toLowerCase() === "basic" 
                                     ? "/booking/coffee/basic" 
                                     : "/booking/coffee/premium";
+                                } else if (tour.slug === "food") {
+                                  window.location.href = option.toLowerCase() === "basic" 
+                                    ? "/booking/streetfood/basic" 
+                                    : "/booking/streetfood/premium";
+                                } else if (tour.slug === "nightlife") {
+                                  window.location.href = option.toLowerCase() === "basic" 
+                                    ? "/booking/nightlife/basic" 
+                                    : "/booking/nightlife/premium";
+                                } else if (tour.slug === "photography") {
+                                  window.location.href = "/booking/photography/basic";
+                                } else if (tour.slug === "cu-chi-motorcycle") {
+                                  window.location.href = "/booking/cuchimotorcycle/basic";
                                 } else {
                                   // For other tours, use WhatsApp booking
                                   const message = `🎯 *BOOK TOUR: ${tour.title} - ${option}*\n\n` +
@@ -249,8 +261,8 @@ const Tours = ({ theme }) => {
                                   window.open(whatsappUrl, '_blank');
                                 }
                               }}
-                              className={`w-full py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
-                                option.toLowerCase() === "basic"
+                              className={`w-full py-2 sm:py-3 rounded-lg sm:rounded-xl font-medium transition-all duration-300 hover:scale-105 text-sm sm:text-base ${
+                                option.toLowerCase() === "basic" || option.toLowerCase() === "book now"
                                   ? isMorning
                                     ? "bg-[#c2a46b] text-white hover:bg-[#b8945a]"
                                     : "bg-[#ffcd3c] text-[#0b0b14] hover:bg-[#e6b835]"
@@ -259,7 +271,7 @@ const Tours = ({ theme }) => {
                                     : "bg-[#4cc9f0] text-[#0b0b14] hover:bg-[#3ab5d9]"
                               }`}
                             >
-                              {option === "Basic" ? "📋 Basic Package" : "⭐ Premium Package"}
+                              {option === "Basic" ? "📋 Basic Package" : option === "Premium" ? "⭐ Premium Package" : "📋 Book Now"}
                             </button>
                           ))}
                         </div>
@@ -273,41 +285,41 @@ const Tours = ({ theme }) => {
 
           {/* Why Choose Us Section */}
           <div
-            className={`mt-16 rounded-2xl p-8 text-center ${
+            className={`mt-12 sm:mt-16 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center ${
               isMorning
                 ? "bg-gradient-to-r from-[#c2a46b] to-[#d4b574] text-white"
                 : "bg-gradient-to-r from-[#4cc9f0] to-[#4361ee] text-white"
             }`}
           >
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
               🎯 Why Choose Our Tours?
             </h3>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
-              <div className="bg-white/20 rounded-xl p-6 backdrop-blur-sm">
-                <h4 className="font-semibold mb-2">🏠 Local Expertise</h4>
-                <p className="text-sm">Born and raised in Saigon, we know every hidden gem, best food spot, and local secret!</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-left">
+              <div className="bg-white/20 rounded-lg sm:rounded-xl p-4 sm:p-6 backdrop-blur-sm">
+                <h4 className="font-semibold mb-2 text-sm sm:text-base">🏠 Local Expertise</h4>
+                <p className="text-xs sm:text-sm">Born and raised in Saigon, we know every hidden gem, best food spot, and local secret!</p>
               </div>
-              <div className="bg-white/20 rounded-xl p-6 backdrop-blur-sm">
-                <h4 className="font-semibold mb-2">👥 Small Groups</h4>
-                <p className="text-sm">Maximum 8 people per tour for a personalized, intimate experience with locals.</p>
+              <div className="bg-white/20 rounded-lg sm:rounded-xl p-4 sm:p-6 backdrop-blur-sm">
+                <h4 className="font-semibold mb-2 text-sm sm:text-base">👥 Small Groups</h4>
+                <p className="text-xs sm:text-sm">Maximum 8 people per tour for a personalized, intimate experience with locals.</p>
               </div>
-              <div className="bg-white/20 rounded-xl p-6 backdrop-blur-sm">
-                <h4 className="font-semibold mb-2">💯 Authentic Experience</h4>
-                <p className="text-sm">No tourist traps! We take you where locals go and show you the real Saigon.</p>
+              <div className="bg-white/20 rounded-lg sm:rounded-xl p-4 sm:p-6 backdrop-blur-sm">
+                <h4 className="font-semibold mb-2 text-sm sm:text-base">💯 Authentic Experience</h4>
+                <p className="text-xs sm:text-sm">No tourist traps! We take you where locals go and show you the real Saigon.</p>
               </div>
             </div>
           </div>
 
           {/* Call to Action */}
-          <div className="text-center mt-16">
+          <div className="text-center mt-12 sm:mt-16">
             <p
-              className={`text-lg md:text-xl mb-8 ${
+              className={`text-base sm:text-lg md:text-xl mb-6 sm:mb-8 ${
                 isMorning ? "text-gray-700" : "text-gray-300"
               }`}
             >
               Ready to experience the real Saigon? Book your perfect tour today!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <button
                 onClick={() => {
                   const message = `🎯 *INTERESTED IN TOURS*\n\n` +
@@ -321,7 +333,7 @@ const Tours = ({ theme }) => {
                   const whatsappUrl = `https://wa.me/+84978270038?text=${encodeURIComponent(message)}`;
                   window.open(whatsappUrl, '_blank');
                 }}
-                className={`px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 ${
+                className={`px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 hover:scale-105 ${
                   isMorning
                     ? "bg-[#0f3e2c] text-white hover:bg-[#1a5a3f]"
                     : "bg-[#4cc9f0] text-[#0b0b14] hover:bg-[#3ab5d9]"
@@ -331,7 +343,7 @@ const Tours = ({ theme }) => {
               </button>
               <a
                 href="/saigonir"
-                className={`px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 border-2 ${
+                className={`px-6 sm:px-8 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 hover:scale-105 border-2 ${
                   isMorning
                     ? "border-[#0f3e2c] text-[#0f3e2c] hover:bg-[#0f3e2c] hover:text-white"
                     : "border-[#4cc9f0] text-[#4cc9f0] hover:bg-[#4cc9f0] hover:text-[#0b0b14]"

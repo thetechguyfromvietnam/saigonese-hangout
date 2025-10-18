@@ -20,6 +20,14 @@ import BasicHistory from "./pages/booking/history/BasicHistory.jsx";
 import PremiumHistory from "./pages/booking/history/PremiumHistory.jsx";
 import BasicCoffee from "./pages/booking/coffee/BasicCoffee.jsx";
 import PremiumCoffee from "./pages/booking/coffee/PremiumCoffee.jsx";
+import BasicStreetFood from "./pages/booking/streetfood/BasicStreetFood.jsx";
+import PremiumStreetFood from "./pages/booking/streetfood/PremiumStreetFood.jsx";
+import BasicNightLife from "./pages/booking/nightlife/BasicNightLife.jsx";
+import PremiumNightLife from "./pages/booking/nightlife/PremiumNightLife.jsx";
+import BasicPhotography from "./pages/booking/photography/BasicPhotography.jsx";
+import PremiumPhotography from "./pages/booking/photography/PremiumPhotography.jsx";
+import BasicCuChiMotorcycle from "./pages/booking/cuchimotorcycle/BasicCuChiMotorcycle.jsx";
+import PremiumCuChiMotorcycle from "./pages/booking/cuchimotorcycle/PremiumCuChiMotorcycle.jsx";
 import BookingSuccess from "./pages/booking/success/BookingSuccess.jsx";
 
 const App = () => {
@@ -37,7 +45,7 @@ const App = () => {
         <ThemeNavbar theme={theme} setTheme={setTheme} />
         <TourNavbar theme={theme} />
 
-        <main className="pt-28 px-4 md:px-10">
+        <main className="pt-32 sm:pt-28 md:pt-28 px-4 md:px-10">
           <Routes>
             {/* General */}
             <Route path="/" element={<Home theme={theme} />} />
@@ -58,6 +66,14 @@ const App = () => {
             <Route path="/booking/history/premium" element={<PremiumHistory />} />
             <Route path="/booking/coffee/basic" element={<BasicCoffee />} />
             <Route path="/booking/coffee/premium" element={<PremiumCoffee />} />
+            <Route path="/booking/streetfood/basic" element={<BasicStreetFood />} />
+            <Route path="/booking/streetfood/premium" element={<PremiumStreetFood />} />
+            <Route path="/booking/nightlife/basic" element={<BasicNightLife />} />
+            <Route path="/booking/nightlife/premium" element={<PremiumNightLife />} />
+            <Route path="/booking/photography/basic" element={<BasicPhotography />} />
+            <Route path="/booking/photography/premium" element={<PremiumPhotography />} />
+            <Route path="/booking/cuchimotorcycle/basic" element={<BasicCuChiMotorcycle />} />
+            <Route path="/booking/cuchimotorcycle/premium" element={<PremiumCuChiMotorcycle />} />
             <Route path="/booking/success" element={<BookingSuccess />} />
           </Routes>
         </main>

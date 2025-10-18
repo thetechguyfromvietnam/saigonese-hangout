@@ -1,10 +1,10 @@
 import Navbar from "../../components/Navbar/TourNavbar.jsx";
 import Hero from "../../components/Hero.jsx";
 import Footer from "../../components/Footer.jsx";
-const NightLife = () => {
+const NightLife = ({ theme }) => {
   return (
     <div className="bg-white text-gray-800">
-      <Navbar />
+      <Navbar theme={theme} />
       <Hero
         title="Night-Life Tour"
         subtitle="🟡 Add intro text for Night-Life Tour here"
