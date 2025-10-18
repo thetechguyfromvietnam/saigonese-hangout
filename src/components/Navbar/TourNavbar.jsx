@@ -1,4 +1,3 @@
-
 const TourNavbar = ({ theme }) => {
   const isMorning = theme === "morning";
 

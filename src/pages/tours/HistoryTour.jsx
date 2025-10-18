@@ -1,24 +1,126 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HistoryTour = ({ theme }) => {
+  const isMorning = theme === "morning";
+
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">History Tour</h1>
-        <p className="text-lg">Learn about the history and culture life of Sài Gòn.</p>
-        <div className="mt-8">
-          <a 
-            href="/booking/history/basic" 
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg mr-4 transition-colors"
-          >
-            Book Basic Tour
-          </a>
-          <a 
-            href="/booking/history/premium" 
-            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg transition-colors"
-          >
-            Book Premium Tour
-          </a>
+    <div className={`min-h-screen ${isMorning ? 'bg-gradient-to-br from-amber-50 to-orange-50' : 'bg-gradient-to-br from-slate-900 to-gray-900'} transition-all duration-500`}>
+      {/* Hero Section */}
+      <div className="relative h-[50vh] sm:h-[60vh] overflow-hidden">
+        <img 
+          src="/images/morning-tours/history-tour/background.jpg" 
+          alt="History Tour" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white px-4 sm:px-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+              History Tour
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+              Learn about the history and culture life of Sài Gòn through guided tours of historic landmarks and cultural sites.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 ${
+            isMorning ? 'text-[#0f3e2c]' : 'text-white'
+          }`}>
+            Choose Your Experience
+          </h2>
+          <p className={`text-sm sm:text-base md:text-lg ${
+            isMorning ? 'text-gray-700' : 'text-gray-300'
+          } max-w-3xl mx-auto`}>
+            Select between our Basic and Premium History Tour packages, each offering unique insights into Saigon's rich cultural heritage.
+          </p>
+        </div>
+
+        {/* Tour Options */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+          {/* Basic Tour */}
+          <div className={`rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 ${
+            isMorning 
+              ? 'bg-white border border-gray-200' 
+              : 'bg-gray-800 border border-gray-700'
+          }`}>
+            <div className="p-4 sm:p-6">
+              <h3 className={`text-xl sm:text-2xl font-bold mb-3 sm:mb-4 ${
+                isMorning ? 'text-[#0f3e2c]' : 'text-white'
+              }`}>
+                Basic History Tour
+              </h3>
+              <p className={`text-sm sm:text-base mb-4 sm:mb-6 ${
+                isMorning ? 'text-gray-600' : 'text-gray-300'
+              }`}>
+                Perfect introduction to Saigon's history with visits to major landmarks and cultural sites.
+              </p>
+              <ul className={`text-xs sm:text-sm space-y-2 mb-6 sm:mb-8 ${
+                isMorning ? 'text-gray-600' : 'text-gray-300'
+              }`}>
+                <li>• Guided tour of historic districts</li>
+                <li>• Visit to Independence Palace</li>
+                <li>• War Remnants Museum</li>
+                <li>• Local market experience</li>
+                <li>• Professional English-speaking guide</li>
+              </ul>
+              <Link
+                to="/booking/history/basic"
+                className={`block w-full text-center px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 ${
+                  isMorning
+                    ? 'bg-[#0f3e2c] text-white hover:bg-[#0f3e2c]/90 hover:shadow-lg'
+                    : 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg'
+                }`}
+              >
+                Book Basic Tour
+              </Link>
+            </div>
+          </div>
+
+          {/* Premium Tour */}
+          <div className={`rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 ${
+            isMorning 
+              ? 'bg-white border border-gray-200' 
+              : 'bg-gray-800 border border-gray-700'
+          }`}>
+            <div className="p-4 sm:p-6">
+              <h3 className={`text-xl sm:text-2xl font-bold mb-3 sm:mb-4 ${
+                isMorning ? 'text-[#0f3e2c]' : 'text-white'
+              }`}>
+                Premium History Tour
+              </h3>
+              <p className={`text-sm sm:text-base mb-4 sm:mb-6 ${
+                isMorning ? 'text-gray-600' : 'text-gray-300'
+              }`}>
+                Comprehensive experience with exclusive access to historical sites and cultural experiences.
+              </p>
+              <ul className={`text-xs sm:text-sm space-y-2 mb-6 sm:mb-8 ${
+                isMorning ? 'text-gray-600' : 'text-gray-300'
+              }`}>
+                <li>• All Basic Tour inclusions</li>
+                <li>• Private museum tours</li>
+                <li>• Traditional Vietnamese lunch</li>
+                <li>• Cultural workshop experience</li>
+                <li>• Souvenir package included</li>
+                <li>• Small group (max 8 people)</li>
+              </ul>
+              <Link
+                to="/booking/history/premium"
+                className={`block w-full text-center px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 ${
+                  isMorning
+                    ? 'bg-gradient-to-r from-[#ffcd3c] to-[#ff914d] text-[#0f3e2c] hover:opacity-90 hover:shadow-lg'
+                    : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:opacity-90 hover:shadow-lg'
+                }`}
+              >
+                Book Premium Tour
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -244,9 +244,29 @@ const Tours = ({ theme }) => {
                                     ? "/booking/nightlife/basic" 
                                     : "/booking/nightlife/premium";
                                 } else if (tour.slug === "photography") {
-                                  window.location.href = "/booking/photography/basic";
+                                  // For photography tour, use WhatsApp booking
+                                  const message = `📸 *BOOK PHOTOGRAPHY TOUR*\n\n` +
+                                    `📝 ${tour.description}\n\n` +
+                                    `⏱️ Duration: ${tour.duration}\n` +
+                                    `💰 Price: ${tour.price}\n` +
+                                    `✨ Highlights: ${tour.highlights.join(', ')}\n\n` +
+                                    `I would like to book the Photography Tour. Please provide more details and availability.\n\n` +
+                                    `Thank you! 📸🇻🇳`;
+                                  
+                                  const whatsappUrl = `https://wa.me/+84978270038?text=${encodeURIComponent(message)}`;
+                                  window.open(whatsappUrl, '_blank');
                                 } else if (tour.slug === "cu-chi-motorcycle") {
-                                  window.location.href = "/booking/cuchimotorcycle/basic";
+                                  // For Cu Chi motorcycle tour, use WhatsApp booking
+                                  const message = `🏍️ *BOOK CU CHI MOTORCYCLE TOUR*\n\n` +
+                                    `📝 ${tour.description}\n\n` +
+                                    `⏱️ Duration: ${tour.duration}\n` +
+                                    `💰 Price: ${tour.price}\n` +
+                                    `✨ Highlights: ${tour.highlights.join(', ')}\n\n` +
+                                    `I would like to book the Cu Chi Motorcycle Tour. Please provide more details and availability.\n\n` +
+                                    `Thank you! 🏍️🇻🇳`;
+                                  
+                                  const whatsappUrl = `https://wa.me/+84978270038?text=${encodeURIComponent(message)}`;
+                                  window.open(whatsappUrl, '_blank');
                                 } else {
                                   // For other tours, use WhatsApp booking
                                   const message = `🎯 *BOOK TOUR: ${tour.title} - ${option}*\n\n` +
