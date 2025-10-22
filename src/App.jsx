@@ -28,7 +28,7 @@ import PremiumNightLife from "./pages/booking/nightlife/PremiumNightLife.jsx";
 import BookingSuccess from "./pages/booking/success/BookingSuccess.jsx";
 
 const App = () => {
-  const [theme, setTheme] = useState("morning");
+  const [theme, setTheme] = useState("night");
 
   return (
     <div
