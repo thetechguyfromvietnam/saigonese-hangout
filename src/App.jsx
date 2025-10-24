@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import ThemeNavbar from "./components/Navbar/ThemeNavbar.jsx";
 import TourNavbar from "./components/Navbar/TourNavbar.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
 import About from "./pages/About.jsx";
@@ -36,6 +37,7 @@ const App = () => {
       }`}
     >
       <BrowserRouter>
+        <ScrollToTop />
         <ThemeNavbar theme={theme} setTheme={setTheme} />
         <TourNavbar theme={theme} />
 
