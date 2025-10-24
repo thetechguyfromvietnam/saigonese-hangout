@@ -17,13 +17,10 @@ import CityTour from "./pages/tours/CityTour.jsx";
 import NightLife from "./pages/tours/NightLife.jsx";
 
 // Booking Pages
-import BasicHistory from "./pages/booking/history/BasicHistory.jsx";
-import PremiumHistory from "./pages/booking/history/PremiumHistory.jsx";
-import BasicCoffee from "./pages/booking/coffee/BasicCoffee.jsx";
-import PremiumCoffee from "./pages/booking/coffee/PremiumCoffee.jsx";
+import HistoryTourBooking from "./pages/booking/history/HistoryTour.jsx";
+import CoffeeTourBooking from "./pages/booking/coffee/CoffeeTour.jsx";
 import BasicStreetFood from "./pages/booking/streetfood/BasicStreetFood.jsx";
 import PremiumStreetFood from "./pages/booking/streetfood/PremiumStreetFood.jsx";
-import BasicNightLife from "./pages/booking/nightlife/BasicNightLife.jsx";
 import PremiumNightLife from "./pages/booking/nightlife/PremiumNightLife.jsx";
 import BookingSuccess from "./pages/booking/success/BookingSuccess.jsx";
 
@@ -60,14 +57,12 @@ const App = () => {
             <Route path="/tours/nightlife" element={<NightLife theme={theme} />} />
 
             {/* Booking Pages */}
-            <Route path="/booking/history/basic" element={<BasicHistory />} />
-            <Route path="/booking/history/premium" element={<PremiumHistory />} />
-            <Route path="/booking/coffee/basic" element={<BasicCoffee />} />
-            <Route path="/booking/coffee/premium" element={<PremiumCoffee />} />
+            <Route path="/booking/history" element={<HistoryTourBooking />} />
+            <Route path="/booking/history/basic" element={<HistoryTourBooking />} />
+            <Route path="/booking/coffee/basic" element={<CoffeeTourBooking />} />
             <Route path="/booking/streetfood/basic" element={<BasicStreetFood />} />
             <Route path="/booking/streetfood/premium" element={<PremiumStreetFood />} />
-            <Route path="/booking/nightlife/basic" element={<BasicNightLife />} />
-            <Route path="/booking/nightlife/premium" element={<PremiumNightLife />} />
+            <Route path="/booking/nightlife" element={<PremiumNightLife theme={theme} />} />
             <Route path="/booking/success" element={<BookingSuccess />} />
           </Routes>
         </main>

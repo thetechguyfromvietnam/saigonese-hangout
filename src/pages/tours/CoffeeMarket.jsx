@@ -27,12 +27,12 @@ const CoffeeMarket = ({ theme }) => {
       </div>
 
       {/* Content Section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 ${
             isMorning ? 'text-[#0f3e2c]' : 'text-white'
           }`}>
-            Choose Your Experience
+            Coffee & Market Tour Experience
           </h2>
           <p className={`text-sm sm:text-base md:text-lg ${
             isMorning ? 'text-gray-700' : 'text-gray-300'
@@ -41,86 +41,57 @@ const CoffeeMarket = ({ theme }) => {
           </p>
         </div>
 
-        {/* Tour Options */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-          {/* Basic Tour */}
-          <div className={`rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 ${
-            isMorning 
-              ? 'bg-white border border-gray-200' 
-              : 'bg-gray-800 border border-gray-700'
-          }`}>
-            <div className="p-4 sm:p-6">
-              <h3 className={`text-xl sm:text-2xl font-bold mb-3 sm:mb-4 ${
-                isMorning ? 'text-[#0f3e2c]' : 'text-white'
-              }`}>
-                Basic Coffee & Market Tour
-              </h3>
-              <p className={`text-sm sm:text-base mb-4 sm:mb-6 ${
-                isMorning ? 'text-gray-600' : 'text-gray-300'
-              }`}>
-                Perfect introduction to Vietnamese coffee culture and local market experiences.
-              </p>
-              <ul className={`text-xs sm:text-sm space-y-2 mb-6 sm:mb-8 ${
-                isMorning ? 'text-gray-600' : 'text-gray-300'
-              }`}>
-                <li>• Visit 3 traditional coffee shops</li>
-                <li>• Local market exploration</li>
-                <li>• Tropical fruit tasting</li>
-                <li>• Vietnamese coffee brewing demo</li>
-                <li>• Professional English-speaking guide</li>
-              </ul>
-              <Link
-                to="/booking/coffee/basic"
-                className={`block w-full text-center px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 ${
-                  isMorning
-                    ? 'bg-[#0f3e2c] text-white hover:bg-[#0f3e2c]/90 hover:shadow-lg'
-                    : 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg'
-                }`}
-              >
-                Book Basic Tour
-              </Link>
-            </div>
-          </div>
-
-          {/* Premium Tour */}
-          <div className={`rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 ${
-            isMorning 
-              ? 'bg-white border border-gray-200' 
-              : 'bg-gray-800 border border-gray-700'
-          }`}>
-            <div className="p-4 sm:p-6">
-              <h3 className={`text-xl sm:text-2xl font-bold mb-3 sm:mb-4 ${
-                isMorning ? 'text-[#0f3e2c]' : 'text-white'
-              }`}>
-                Premium Coffee & Market Tour
-              </h3>
-              <p className={`text-sm sm:text-base mb-4 sm:mb-6 ${
-                isMorning ? 'text-gray-600' : 'text-gray-300'
-              }`}>
-                Exclusive experience with private coffee tastings and premium market access.
-              </p>
-              <ul className={`text-xs sm:text-sm space-y-2 mb-6 sm:mb-8 ${
-                isMorning ? 'text-gray-600' : 'text-gray-300'
-              }`}>
-                <li>• All Basic Tour inclusions</li>
-                <li>• Private coffee cupping session</li>
-                <li>• Premium coffee bean selection</li>
-                <li>• Exclusive market vendor access</li>
-                <li>• Traditional Vietnamese breakfast</li>
-                <li>• Coffee beans souvenir pack</li>
-                <li>• Small group (max 6 people)</li>
-              </ul>
-              <Link
-                to="/booking/coffee/premium"
-                className={`block w-full text-center px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 ${
-                  isMorning
-                    ? 'bg-gradient-to-r from-[#ffcd3c] to-[#ff914d] text-[#0f3e2c] hover:opacity-90 hover:shadow-lg'
-                    : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:opacity-90 hover:shadow-lg'
-                }`}
-              >
-                Book Premium Tour
-              </Link>
-            </div>
+        {/* Single Tour Option */}
+        <div className={`max-w-2xl mx-auto rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 ${
+          isMorning 
+            ? 'bg-white border border-gray-200' 
+            : 'bg-gray-800 border border-gray-700'
+        }`}>
+          <div className="p-6 sm:p-8">
+            <h3 className={`text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center ${
+              isMorning ? 'text-[#0f3e2c]' : 'text-white'
+            }`}>
+              Coffee & Market Tour
+            </h3>
+            <p className={`text-base sm:text-lg mb-6 sm:mb-8 text-center ${
+              isMorning ? 'text-gray-600' : 'text-gray-300'
+            }`}>
+              Perfect introduction to Vietnamese coffee culture and local market experiences.
+            </p>
+            <ul className={`text-sm sm:text-base space-y-3 mb-8 sm:mb-10 ${
+              isMorning ? 'text-gray-600' : 'text-gray-300'
+            }`}>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Visit 3 traditional coffee shops</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Local market exploration</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Tropical fruit tasting</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Vietnamese coffee brewing demo</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Professional English-speaking guide</span>
+              </li>
+            </ul>
+            <Link
+              to="/booking/coffee/basic"
+              className={`block w-full text-center px-6 sm:px-8 py-4 sm:py-5 rounded-lg font-semibold transition-all duration-300 text-lg sm:text-xl ${
+                isMorning
+                  ? 'bg-[#0f3e2c] text-white hover:bg-[#0f3e2c]/90 hover:shadow-lg'
+                  : 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg'
+              }`}
+            >
+              Book Coffee & Market Tour
+            </Link>
           </div>
         </div>
       </div>

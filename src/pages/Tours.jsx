@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer.jsx";
+import TourCard from "../components/TourCard.jsx";
 
 const Tours = ({ theme }) => {
   const isMorning = theme === "morning";
@@ -10,23 +11,15 @@ const Tours = ({ theme }) => {
       tours: [
         {
           title: "History Tour",
-          description: "Learn about the history and culture life of Sài Gòn. Visit historic landmarks, learn about Vietnam's past, and discover the stories that shaped this vibrant city.",
-          duration: "3-4 hours",
-          price: "From $25",
-          highlights: ["Independence Palace", "War Remnants Museum", "Notre Dame Cathedral", "Central Post Office"],
-          image: "/images/morning-tours/history-tour/background.jpg",
+          desc: "Learn about the history and culture life of Sài Gòn. Visit historic landmarks, learn about Vietnam's past, and discover the stories that shaped this vibrant city.",
+          img: "/images/morning-tours/history-tour/background.jpg",
           slug: "history",
-          options: ["Basic", "Premium"]
         },
         {
           title: "Coffee & Market",
-          description: "Taste Vietnamese coffee and explore hidden markets to try tropical fruits. Experience authentic Vietnamese coffee culture and local trading customs.",
-          duration: "2-3 hours", 
-          price: "From $20",
-          highlights: ["Local Coffee Shops", "Ben Thanh Market", "Tropical Fruits", "Coffee Tasting"],
-          image: "/images/morning-tours/coffee-market-tour/background.jpg",
+          desc: "Taste Vietnamese coffee and explore hidden markets to try tropical fruits. Experience authentic Vietnamese coffee culture and local trading customs.",
+          img: "/images/morning-tours/coffee-market-tour/background.jpg",
           slug: "coffee",
-          options: ["Basic", "Premium"]
         },
       ]
     },
@@ -35,23 +28,15 @@ const Tours = ({ theme }) => {
       tours: [
         {
           title: "Street Food Tour",
-          description: "Taste authentic Saigonese dishes in neon-lit alleys. Discover Saigon's incredible street food scene with a local guide.",
-          duration: "2-3 hours",
-          price: "From $25",
-          highlights: ["Pho", "Banh Mi", "Spring Rolls", "Local Desserts"],
-          image: "/images/night-tours/street-food-tour/munchies-bg.jpg",
-          slug: "food",
-          options: ["Basic", "Premium"]
+          desc: "Taste authentic Saigonese dishes in neon-lit alleys. Discover Saigon's incredible street food scene with a local guide.",
+          img: "/images/night-tours/street-food-tour/munchies-bg.jpg",
+          slug: "streetfood",
         },
         {
           title: "Night-Life Tour",
-          description: "Drinking, Bar, Karaoke, Club. Experience Saigon's vibrant nightlife! Visit the best bars, clubs, and entertainment venues.",
-          duration: "4-6 hours",
-          price: "From $30",
-          highlights: ["Rooftop Bars", "Nightclubs", "Live Music", "Karaoke"],
-          image: "/images/night-tours/night-life-tour.jpg",
+          desc: "Drinking, Bar, Karaoke, Club. Experience Saigon's vibrant nightlife! Visit the best bars, clubs, and entertainment venues.",
+          img: "/images/night-tours/night-life-tour/night-life-tour.jpg",
           slug: "nightlife",
-          options: ["Basic", "Premium"]
         },
       ]
     },
@@ -60,23 +45,15 @@ const Tours = ({ theme }) => {
       tours: [
         {
           title: "Photography Tour",
-          description: "Capture the beauty of Saigon with a professional photography tour. Visit the most photogenic spots and learn photography techniques from local experts.",
-          duration: "4-5 hours",
-          price: "From $35",
-          highlights: ["Golden Hour Shots", "Street Photography", "Architecture", "Local Life"],
-          image: "/images/morning-tours/morning-background.jpg",
+          desc: "Capture the beauty of Saigon with a professional photography tour. Visit the most photogenic spots and learn photography techniques from local experts.",
+          img: "/images/morning-tours/morning-background.jpg",
           slug: "photography",
-          options: ["Book Now"]
         },
         {
           title: "Cu Chi Tunnel on Motorcycle",
-          description: "Adventure to Cu Chi Tunnels by motorcycle! Experience the historic underground network and learn about Vietnam's wartime history with an exciting motorcycle journey.",
-          duration: "6-8 hours",
-          price: "From $45",
-          highlights: ["Motorcycle Adventure", "Cu Chi Tunnels", "War History", "Underground Exploration"],
-          image: "/images/morning-tours/history-tour/background.jpg",
+          desc: "Adventure to Cu Chi Tunnels by motorcycle! Experience the historic underground network and learn about Vietnam's wartime history with an exciting motorcycle journey.",
+          img: "/images/morning-tours/history-tour/background.jpg",
           slug: "cu-chi-motorcycle",
-          options: ["Book Now"]
         }
       ]
     }
@@ -85,12 +62,18 @@ const Tours = ({ theme }) => {
   return (
     <div className="min-h-screen pt-20 sm:pt-24 md:pt-28">
       {/* Hero Section */}
-      <section className="relative w-full h-[50vh] sm:h-[55vh] md:h-[60vh] bg-gradient-to-br from-[#fffaf4] to-[#f0e6d2] flex items-center justify-center">
+      <section className={`relative w-full h-[50vh] sm:h-[55vh] md:h-[60vh] flex items-center justify-center ${
+        isMorning ? "bg-gradient-to-br from-[#fffaf4] to-[#f0e6d2]" : "bg-gradient-to-br from-[#0b0b14] via-[#1a052e] to-[#3d0f55]"
+      }`}>
         <div className="text-center px-4 sm:px-6">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 text-[#0f3e2c]">
-            All <span className="text-[#c2a46b]">Tours</span>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-6 ${
+            isMorning ? "text-[#0f3e2c]" : "text-white"
+          }`}>
+            All <span className={isMorning ? "text-[#c2a46b]" : "text-[#ffcd3c]"}>Tours</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed text-gray-700">
+          <p className={`text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed ${
+            isMorning ? "text-gray-700" : "text-gray-300"
+          }`}>
             Discover Saigon with our amazing tour collection! 
             From morning explorations to night adventures - we have the perfect tour for every traveler! 🇻🇳
           </p>
@@ -98,14 +81,20 @@ const Tours = ({ theme }) => {
       </section>
 
       {/* Tours Content */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-16 bg-[#fffaf4] text-gray-800">
+      <section className={`py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-16 ${
+        isMorning ? "bg-[#fffaf4] text-gray-800" : "bg-[#0b0b14] text-gray-200"
+      }`}>
         <div className="max-w-6xl mx-auto">
           {/* Introduction */}
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#0f3e2c]">
+            <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 ${
+              isMorning ? "text-[#0f3e2c]" : "text-white"
+            }`}>
               Explore Saigon Your Way
             </h2>
-            <p className="text-base sm:text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-gray-700">
+            <p className={`text-base sm:text-lg md:text-xl max-w-4xl mx-auto leading-relaxed ${
+              isMorning ? "text-gray-700" : "text-gray-300"
+            }`}>
               Choose from our carefully curated collection of tours. Each experience is designed to show you the real Saigon - 
               authentic, vibrant, and unforgettable.
             </p>
@@ -123,180 +112,16 @@ const Tours = ({ theme }) => {
                   {category.category}
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 justify-items-center">
                   {category.tours.map((tour, tourIndex) => (
-                    <div
+                    <TourCard 
                       key={tourIndex}
-                      className={`rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] w-full max-w-md ${
-                        isMorning
-                          ? "bg-white border border-gray-100"
-                          : "bg-white/10 border border-white/20 backdrop-blur-sm"
-                      }`}
-                    >
-                      {/* Tour Image */}
-                      <div className="aspect-video overflow-hidden">
-                        <img
-                          src={tour.image}
-                          alt={tour.title}
-                          className="w-full h-full object-cover transition-all duration-300 hover:scale-105"
-                        />
-                      </div>
-                      
-                      {/* Tour Content */}
-                      <div className="p-4 sm:p-6">
-                        <h4
-                          className={`text-lg sm:text-xl font-bold mb-2 sm:mb-3 ${
-                            isMorning ? "text-[#0f3e2c]" : "text-white"
-                          }`}
-                        >
-                          {tour.title}
-                        </h4>
-                        
-                        <p
-                          className={`text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed ${
-                            isMorning ? "text-gray-700" : "text-gray-300"
-                          }`}
-                        >
-                          {tour.description}
-                        </p>
-
-                        {/* Tour Details */}
-                        <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
-                          <div>
-                            <span
-                              className={`text-xs font-semibold ${
-                                isMorning ? "text-[#0f3e2c]" : "text-[#4cc9f0]"
-                              }`}
-                            >
-                              ⏱️ Duration
-                            </span>
-                            <p
-                              className={`text-sm ${
-                                isMorning ? "text-gray-600" : "text-gray-400"
-                              }`}
-                            >
-                              {tour.duration}
-                            </p>
-                          </div>
-                          <div>
-                            <span
-                              className={`text-xs font-semibold ${
-                                isMorning ? "text-[#0f3e2c]" : "text-[#4cc9f0]"
-                              }`}
-                            >
-                              💰 Price
-                            </span>
-                            <p
-                              className={`text-sm ${
-                                isMorning ? "text-gray-600" : "text-gray-400"
-                              }`}
-                            >
-                              {tour.price}
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Highlights */}
-                        <div className="mb-4 sm:mb-6">
-                          <span
-                            className={`text-xs font-semibold block mb-2 ${
-                              isMorning ? "text-[#0f3e2c]" : "text-[#4cc9f0]"
-                            }`}
-                          >
-                            ✨ Highlights
-                          </span>
-                          <div className="flex flex-wrap gap-1 sm:gap-2">
-                            {tour.highlights.map((highlight, index) => (
-                              <span
-                                key={index}
-                                className={`text-xs px-2 py-1 rounded-full ${
-                                  isMorning
-                                    ? "bg-[#fffaf4] text-[#0f3e2c] border border-[#e6d7c3]"
-                                    : "bg-white/10 text-gray-300 border border-white/20"
-                                }`}
-                              >
-                                {highlight}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Booking Options */}
-                        <div className="space-y-2">
-                          {tour.options.map((option, optionIndex) => (
-                            <button
-                              key={optionIndex}
-                              onClick={() => {
-                                if (tour.slug === "history") {
-                                  window.location.href = option.toLowerCase() === "basic" 
-                                    ? "/booking/history/basic" 
-                                    : "/booking/history/premium";
-                                } else if (tour.slug === "coffee") {
-                                  window.location.href = option.toLowerCase() === "basic" 
-                                    ? "/booking/coffee/basic" 
-                                    : "/booking/coffee/premium";
-                                } else if (tour.slug === "food") {
-                                  window.location.href = option.toLowerCase() === "basic" 
-                                    ? "/booking/streetfood/basic" 
-                                    : "/booking/streetfood/premium";
-                                } else if (tour.slug === "nightlife") {
-                                  window.location.href = option.toLowerCase() === "basic" 
-                                    ? "/booking/nightlife/basic" 
-                                    : "/booking/nightlife/premium";
-                                } else if (tour.slug === "photography") {
-                                  // For photography tour, use WhatsApp booking
-                                  const message = `📸 *BOOK PHOTOGRAPHY TOUR*\n\n` +
-                                    `📝 ${tour.description}\n\n` +
-                                    `⏱️ Duration: ${tour.duration}\n` +
-                                    `💰 Price: ${tour.price}\n` +
-                                    `✨ Highlights: ${tour.highlights.join(', ')}\n\n` +
-                                    `I would like to book the Photography Tour. Please provide more details and availability.\n\n` +
-                                    `Thank you! 📸🇻🇳`;
-                                  
-                                  const whatsappUrl = `https://wa.me/+84978270038?text=${encodeURIComponent(message)}`;
-                                  window.open(whatsappUrl, '_blank');
-                                } else if (tour.slug === "cu-chi-motorcycle") {
-                                  // For Cu Chi motorcycle tour, use WhatsApp booking
-                                  const message = `🏍️ *BOOK CU CHI MOTORCYCLE TOUR*\n\n` +
-                                    `📝 ${tour.description}\n\n` +
-                                    `⏱️ Duration: ${tour.duration}\n` +
-                                    `💰 Price: ${tour.price}\n` +
-                                    `✨ Highlights: ${tour.highlights.join(', ')}\n\n` +
-                                    `I would like to book the Cu Chi Motorcycle Tour. Please provide more details and availability.\n\n` +
-                                    `Thank you! 🏍️🇻🇳`;
-                                  
-                                  const whatsappUrl = `https://wa.me/+84978270038?text=${encodeURIComponent(message)}`;
-                                  window.open(whatsappUrl, '_blank');
-                                } else {
-                                  // For other tours, use WhatsApp booking
-                                  const message = `🎯 *BOOK TOUR: ${tour.title} - ${option}*\n\n` +
-                                    `📝 ${tour.description}\n\n` +
-                                    `⏱️ Duration: ${tour.duration}\n` +
-                                    `💰 Price: ${tour.price}\n` +
-                                    `✨ Highlights: ${tour.highlights.join(', ')}\n\n` +
-                                    `I would like to book the ${option} option for this tour. Please provide more details and availability.\n\n` +
-                                    `Thank you! 🇻🇳`;
-                                  
-                                  const whatsappUrl = `https://wa.me/+84978270038?text=${encodeURIComponent(message)}`;
-                                  window.open(whatsappUrl, '_blank');
-                                }
-                              }}
-                              className={`w-full py-2 sm:py-3 rounded-lg sm:rounded-xl font-medium transition-all duration-300 hover:scale-105 text-sm sm:text-base ${
-                                option.toLowerCase() === "basic" || option.toLowerCase() === "book now"
-                                  ? isMorning
-                                    ? "bg-[#c2a46b] text-white hover:bg-[#b8945a]"
-                                    : "bg-[#ffcd3c] text-[#0b0b14] hover:bg-[#e6b835]"
-                                  : isMorning
-                                    ? "bg-[#0f3e2c] text-white hover:bg-[#1a5a3f]"
-                                    : "bg-[#4cc9f0] text-[#0b0b14] hover:bg-[#3ab5d9]"
-                              }`}
-                            >
-                              {option === "Basic" ? "📋 Basic Package" : option === "Premium" ? "⭐ Premium Package" : "📋 Book Now"}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                      title={tour.title}
+                      desc={tour.desc}
+                      img={tour.img}
+                      slug={tour.slug}
+                      theme={theme}
+                    />
                   ))}
                 </div>
               </div>

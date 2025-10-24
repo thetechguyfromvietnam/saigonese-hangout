@@ -27,12 +27,12 @@ const CityTour = ({ theme }) => {
       </div>
 
       {/* Content Section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 ${
             isMorning ? 'text-[#0f3e2c]' : 'text-white'
           }`}>
-            Choose Your Experience
+            City Tour Experience
           </h2>
           <p className={`text-sm sm:text-base md:text-lg ${
             isMorning ? 'text-gray-700' : 'text-gray-300'
@@ -41,86 +41,61 @@ const CityTour = ({ theme }) => {
           </p>
         </div>
 
-        {/* Tour Options */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-          {/* Basic Tour */}
-          <div className={`rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 ${
-            isMorning 
-              ? 'bg-white border border-gray-200' 
-              : 'bg-gray-800 border border-gray-700'
-          }`}>
-            <div className="p-4 sm:p-6">
-              <h3 className={`text-xl sm:text-2xl font-bold mb-3 sm:mb-4 ${
-                isMorning ? 'text-[#0f3e2c]' : 'text-white'
-              }`}>
-                Basic City Tour
-              </h3>
-              <p className={`text-sm sm:text-base mb-4 sm:mb-6 ${
-                isMorning ? 'text-gray-600' : 'text-gray-300'
-              }`}>
-                Perfect introduction to Saigon's main attractions and cultural landmarks.
-              </p>
-              <ul className={`text-xs sm:text-sm space-y-2 mb-6 sm:mb-8 ${
-                isMorning ? 'text-gray-600' : 'text-gray-300'
-              }`}>
-                <li>• Visit Notre-Dame Cathedral</li>
-                <li>• Central Post Office tour</li>
-                <li>• Ben Thanh Market exploration</li>
-                <li>• Saigon Opera House</li>
-                <li>• Professional English-speaking guide</li>
-              </ul>
-              <Link
-                to="/booking/city/basic"
-                className={`block w-full text-center px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 ${
-                  isMorning
-                    ? 'bg-[#0f3e2c] text-white hover:bg-[#0f3e2c]/90 hover:shadow-lg'
-                    : 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg'
-                }`}
-              >
-                Book Basic Tour
-              </Link>
-            </div>
-          </div>
-
-          {/* Premium Tour */}
-          <div className={`rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 ${
-            isMorning 
-              ? 'bg-white border border-gray-200' 
-              : 'bg-gray-800 border border-gray-700'
-          }`}>
-            <div className="p-4 sm:p-6">
-              <h3 className={`text-xl sm:text-2xl font-bold mb-3 sm:mb-4 ${
-                isMorning ? 'text-[#0f3e2c]' : 'text-white'
-              }`}>
-                Premium City Tour
-              </h3>
-              <p className={`text-sm sm:text-base mb-4 sm:mb-6 ${
-                isMorning ? 'text-gray-600' : 'text-gray-300'
-              }`}>
-                Comprehensive city experience with exclusive access and luxury transportation.
-              </p>
-              <ul className={`text-xs sm:text-sm space-y-2 mb-6 sm:mb-8 ${
-                isMorning ? 'text-gray-600' : 'text-gray-300'
-              }`}>
-                <li>• All Basic Tour inclusions</li>
-                <li>• Private vehicle transportation</li>
-                <li>• Exclusive rooftop bar access</li>
-                <li>• Traditional Vietnamese lunch</li>
-                <li>• Professional photographer</li>
-                <li>• Souvenir package included</li>
-                <li>• Small group (max 6 people)</li>
-              </ul>
-              <Link
-                to="/booking/city/premium"
-                className={`block w-full text-center px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-300 ${
-                  isMorning
-                    ? 'bg-gradient-to-r from-[#ffcd3c] to-[#ff914d] text-[#0f3e2c] hover:opacity-90 hover:shadow-lg'
-                    : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:opacity-90 hover:shadow-lg'
-                }`}
-              >
-                Book Premium Tour
-              </Link>
-            </div>
+        {/* Single Tour Option */}
+        <div className={`max-w-2xl mx-auto rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 ${
+          isMorning 
+            ? 'bg-white border border-gray-200' 
+            : 'bg-gray-800 border border-gray-700'
+        }`}>
+          <div className="p-6 sm:p-8">
+            <h3 className={`text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center ${
+              isMorning ? 'text-[#0f3e2c]' : 'text-white'
+            }`}>
+              City Tour of Saigon
+            </h3>
+            <p className={`text-base sm:text-lg mb-6 sm:mb-8 text-center ${
+              isMorning ? 'text-gray-600' : 'text-gray-300'
+            }`}>
+              Perfect introduction to Saigon's main attractions and cultural landmarks.
+            </p>
+            <ul className={`text-sm sm:text-base space-y-3 mb-8 sm:mb-10 ${
+              isMorning ? 'text-gray-600' : 'text-gray-300'
+            }`}>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Visit Notre-Dame Cathedral</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Central Post Office tour</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Ben Thanh Market exploration</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Saigon Opera House</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Professional English-speaking guide</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3">•</span>
+                <span>Transportation included</span>
+              </li>
+            </ul>
+            <Link
+              to="/booking/city/basic"
+              className={`block w-full text-center px-6 sm:px-8 py-4 sm:py-5 rounded-lg font-semibold transition-all duration-300 text-lg sm:text-xl ${
+                isMorning
+                  ? 'bg-[#0f3e2c] text-white hover:bg-[#0f3e2c]/90 hover:shadow-lg'
+                  : 'bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg'
+              }`}
+            >
+              Book City Tour
+            </Link>
           </div>
         </div>
       </div>

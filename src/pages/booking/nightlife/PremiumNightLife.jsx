@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const PremiumNightLife = () => {
+const PremiumNightLife = ({ theme }) => {
+  const isMorning = theme === "morning";
   const [bookingForm, setBookingForm] = useState({
     name: '',
     email: '',
@@ -20,98 +21,99 @@ const PremiumNightLife = () => {
 
   const handleBookingSubmit = (e) => {
     e.preventDefault();
-    alert('Booking submitted for Premium Night-Life Tour! We\'ll contact you soon.');
+    alert('Booking submitted for Night-Life Tour! We\'ll contact you soon.');
     window.location.href = '/booking/success';
   };
 
   return (
-    <div className="min-h-screen py-8 px-4">
+    <div className={`min-h-screen py-8 px-4 ${isMorning ? 'bg-gradient-to-br from-amber-50 to-orange-50' : 'bg-gradient-to-br from-slate-900 to-gray-900'}`}>
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-6 text-[#0f3e2c]">
-            Premium Night-Life Tour
+          <h1 className={`text-5xl font-bold mb-6 ${isMorning ? 'text-[#0f3e2c]' : 'text-white'}`}>
+            Night-Life Tour
           </h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-600">
-            VIP access to Saigon's most exclusive nightlife venues. This premium 6-8 hour experience 
-            includes bottle service, private tables, and behind-the-scenes access.
+          <p className={`text-xl max-w-3xl mx-auto ${isMorning ? 'text-gray-600' : 'text-gray-300'}`}>
+            Experience Saigon's vibrant nightlife! Visit rooftop bars, clubs, and entertainment venues 
+            in this premium nightlife tour through the city's electric night scene.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Tour Details */}
           <div>
-            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <div className={`${isMorning ? 'bg-white' : 'bg-gray-800'} rounded-2xl shadow-lg p-8 mb-8`}>
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-4xl font-bold text-blue-600">$65</span>
-                <span className="text-lg text-gray-600">per person • 6-8 hours</span>
+                <span className="text-4xl font-bold text-purple-600">$59</span>
+                <span className={`text-lg ${isMorning ? 'text-gray-600' : 'text-gray-300'}`}>per person • 4-5 hours</span>
               </div>
               
-              <h2 className="text-2xl font-bold mb-6 text-gray-800">What's Included:</h2>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>VIP guide with club connections</span>
+              <h2 className={`text-2xl font-bold mb-6 ${isMorning ? 'text-gray-800' : 'text-white'}`}>What's Included:</h2>
+              <ul className={`space-y-4 ${isMorning ? 'text-gray-700' : 'text-gray-300'}`}>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Rooftop Bar Sunset</strong> (Chạng Vạng) - 4PM-5PM early evening drinks</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>5-6 exclusive venue visits</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Bar Experience</strong> - Visit a popular bar</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Bottle service at premium clubs</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Restaurant with Vietnamese EDM Music</strong> - Dining with live music</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Private VIP tables</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Club Experience</strong> - Last round at a premier club</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Skip-the-line access</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Professional English-speaking guide</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Premium drinks included</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Small group (max 6 people)</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Luxury transportation</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Small group experience (max 6 people)</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold mb-6 text-gray-800">Premium Highlights:</h2>
+            <div className={`${isMorning ? 'bg-white' : 'bg-gray-800'} rounded-2xl shadow-lg p-8`}>
+              <h2 className={`text-2xl font-bold mb-6 ${isMorning ? 'text-gray-800' : 'text-white'}`}>Tour Highlights:</h2>
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-yellow-600 text-xl">🥂</span>
+                  <div className={`w-12 h-12 ${isMorning ? 'bg-orange-100' : 'bg-orange-900/30'} rounded-full flex items-center justify-center flex-shrink-0`}>
+                    <span className="text-orange-600 text-xl">🌇</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">VIP Bottle Service</h3>
-                    <p className="text-gray-600">Premium spirits and champagne at exclusive clubs</p>
+                    <h3 className={`font-semibold ${isMorning ? 'text-gray-800' : 'text-white'}`}>Rooftop Bar Sunset</h3>
+                    <p className={isMorning ? 'text-gray-600' : 'text-gray-300'}>Start your night with sunset drinks at a rooftop bar (4PM-5PM)</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-purple-600 text-xl">🎭</span>
+                  <div className={`w-12 h-12 ${isMorning ? 'bg-purple-100' : 'bg-purple-900/30'} rounded-full flex items-center justify-center flex-shrink-0`}>
+                    <span className="text-purple-600 text-xl">🍻</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">Private Events</h3>
-                    <p className="text-gray-600">Access to members-only events and parties</p>
+                    <h3 className={`font-semibold ${isMorning ? 'text-gray-800' : 'text-white'}`}>Bar Experience</h3>
+                    <p className={isMorning ? 'text-gray-600' : 'text-gray-300'}>Visit a popular bar in Saigon</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-600 text-xl">🚗</span>
+                  <div className={`w-12 h-12 ${isMorning ? 'bg-red-100' : 'bg-red-900/30'} rounded-full flex items-center justify-center flex-shrink-0`}>
+                    <span className="text-red-600 text-xl">🎵</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">Luxury Transport</h3>
-                    <p className="text-gray-600">Premium car service between venues</p>
+                    <h3 className={`font-semibold ${isMorning ? 'text-gray-800' : 'text-white'}`}>Vietnamese EDM Music</h3>
+                    <p className={isMorning ? 'text-gray-600' : 'text-gray-300'}>Dine at a restaurant featuring live Vietnamese EDM music</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className={`w-12 h-12 ${isMorning ? 'bg-blue-100' : 'bg-blue-900/30'} rounded-full flex items-center justify-center flex-shrink-0`}>
+                    <span className="text-blue-600 text-xl">🎉</span>
+                  </div>
+                  <div>
+                    <h3 className={`font-semibold ${isMorning ? 'text-gray-800' : 'text-white'}`}>Club Experience</h3>
+                    <p className={isMorning ? 'text-gray-600' : 'text-gray-300'}>End your night at a premier club (Last round)</p>
                   </div>
                 </div>
               </div>
@@ -120,12 +122,12 @@ const PremiumNightLife = () => {
 
           {/* Booking Form */}
           <div>
-            <div className="bg-white rounded-2xl shadow-lg p-8 sticky top-8">
-              <h2 className="text-2xl font-bold mb-6 text-gray-800">Book Your Premium Tour</h2>
+            <div className={`${isMorning ? 'bg-white' : 'bg-gray-800'} rounded-2xl shadow-lg p-8 sticky top-8`}>
+              <h2 className={`text-2xl font-bold mb-6 ${isMorning ? 'text-gray-800' : 'text-white'}`}>Book Your Night-Life Tour</h2>
               
               <form onSubmit={handleBookingSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className={`block text-sm font-medium mb-2 ${isMorning ? 'text-gray-700' : 'text-gray-300'}`}>
                     Full Name *
                   </label>
                   <input
@@ -134,13 +136,13 @@ const PremiumNightLife = () => {
                     value={bookingForm.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent ${isMorning ? 'border-gray-300 bg-white text-gray-900' : 'border-gray-600 bg-gray-700 text-white'}`}
                     placeholder="Enter your full name"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className={`block text-sm font-medium mb-2 ${isMorning ? 'text-gray-700' : 'text-gray-300'}`}>
                     Email Address *
                   </label>
                   <input
@@ -149,13 +151,13 @@ const PremiumNightLife = () => {
                     value={bookingForm.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent ${isMorning ? 'border-gray-300 bg-white text-gray-900' : 'border-gray-600 bg-gray-700 text-white'}`}
                     placeholder="Enter your email"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className={`block text-sm font-medium mb-2 ${isMorning ? 'text-gray-700' : 'text-gray-300'}`}>
                     Phone Number *
                   </label>
                   <input
@@ -164,13 +166,13 @@ const PremiumNightLife = () => {
                     value={bookingForm.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent ${isMorning ? 'border-gray-300 bg-white text-gray-900' : 'border-gray-600 bg-gray-700 text-white'}`}
                     placeholder="Enter your phone number"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className={`block text-sm font-medium mb-2 ${isMorning ? 'text-gray-700' : 'text-gray-300'}`}>
                     Preferred Date *
                   </label>
                   <input
@@ -179,12 +181,12 @@ const PremiumNightLife = () => {
                     value={bookingForm.date}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent ${isMorning ? 'border-gray-300 bg-white text-gray-900' : 'border-gray-600 bg-gray-700 text-white'}`}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className={`block text-sm font-medium mb-2 ${isMorning ? 'text-gray-700' : 'text-gray-300'}`}>
                     Number of Guests *
                   </label>
                   <select
@@ -192,7 +194,7 @@ const PremiumNightLife = () => {
                     value={bookingForm.guests}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent ${isMorning ? 'border-gray-300 bg-white text-gray-900' : 'border-gray-600 bg-gray-700 text-white'}`}
                   >
                     <option value={1}>1 Guest</option>
                     <option value={2}>2 Guests</option>
@@ -204,7 +206,7 @@ const PremiumNightLife = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className={`block text-sm font-medium mb-2 ${isMorning ? 'text-gray-700' : 'text-gray-300'}`}>
                     Special Requests
                   </label>
                   <textarea
@@ -212,21 +214,39 @@ const PremiumNightLife = () => {
                     value={bookingForm.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent ${isMorning ? 'border-gray-300 bg-white text-gray-900' : 'border-gray-600 bg-gray-700 text-white'}`}
                     placeholder="Any preferences for venues or special requests?"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
+                  className="w-full bg-purple-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
                 >
-                  Book Premium Night-Life Tour - $65
+                  Book Night-Life Tour - $59
                 </button>
+
+                {/* PayPal Payment */}
+                <div className={`border-t pt-4 ${isMorning ? 'border-gray-300' : 'border-gray-600'}`}>
+                  <p className={`text-sm mb-3 text-center ${isMorning ? 'text-gray-600' : 'text-gray-300'}`}>Or pay directly with PayPal:</p>
+                  <div className="flex justify-center">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                      <input type="hidden" name="cmd" value="_xclick" />
+                      <input type="hidden" name="business" value="thestoriesguys@gmail.com" />
+                      <input type="hidden" name="item_name" value="Night-Life Tour - $59 per person" />
+                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="amount" value="59.00" />
+                      <input type="hidden" name="return" value="https://saigonese-hangout.com/booking/success" />
+                      <input type="hidden" name="cancel_return" value="https://saigonese-hangout.com/booking/nightlife/premium" />
+                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+                      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
+                  </div>
+                </div>
               </form>
 
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-blue-800">
+              <div className={`mt-6 p-4 rounded-lg ${isMorning ? 'bg-purple-50' : 'bg-purple-900/20'}`}>
+                <p className={`text-sm ${isMorning ? 'text-purple-800' : 'text-purple-300'}`}>
                   <strong>Free Cancellation:</strong> Cancel up to 24 hours before your tour for a full refund.
                 </p>
               </div>

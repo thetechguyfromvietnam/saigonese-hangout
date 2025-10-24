@@ -34,7 +34,7 @@ const PremiumStreetFood = () => {
           </h1>
           <p className="text-xl max-w-3xl mx-auto text-gray-600">
             Experience Saigon's most exclusive street food scene with VIP access to hidden gems. 
-            This 3-4 hour premium tour includes rare dishes and private tastings.
+            This 4-5 hour premium tour includes rare dishes and private tastings.
           </p>
         </div>
 
@@ -43,39 +43,51 @@ const PremiumStreetFood = () => {
           <div>
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-4xl font-bold text-blue-600">$45</span>
-                <span className="text-lg text-gray-600">per person • 3-4 hours</span>
+                <span className="text-4xl font-bold text-purple-600">$59</span>
+                <span className="text-lg text-gray-600">per person • ~1,500,000₫ • 4-5 hours</span>
               </div>
               
               <h2 className="text-2xl font-bold mb-6 text-gray-800">What's Included:</h2>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Expert local food guide</span>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Gỏi Khô Bò + Nước Mía</strong> - Traditional Vietnamese beef salad with sugarcane juice</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>8-10 premium food tastings</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Bánh Xèo</strong> - Authentic Vietnamese crispy pancake</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Rare & exclusive dishes</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Xôi Gà</strong> - Sticky rice with chicken</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Private kitchen visits</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Bún Bò Huế</strong> - Spicy beef noodle soup</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Local beer & drinks included</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Bò Lá Lốt</strong> - Grilled beef wrapped in betel leaves</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Small group (max 6 people)</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Kem Dừa</strong> - Coconut ice cream</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-green-500">✓</span>
-                  <span>Recipe cards to take home</span>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Rooftop Bar</strong> - End your tour with drinks at a rooftop bar</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span><strong>Michelin Guide Restaurants</strong> - Visit Michelin-selected restaurants</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Professional English-speaking guide</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Small group experience (max 6 people)</span>
                 </li>
               </ul>
             </div>
@@ -85,29 +97,56 @@ const PremiumStreetFood = () => {
               <div className="space-y-4">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-purple-600 text-xl">🦀</span>
+                    <span className="text-purple-600 text-xl">🥗</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">Crab Noodles</h3>
-                    <p className="text-gray-600">Exclusive access to famous crab noodle vendors</p>
+                    <h3 className="font-semibold text-gray-800">Gỏi Khô Bò + Nước Mía</h3>
+                    <p className="text-gray-600">Taste traditional Vietnamese beef salad with fresh sugarcane juice</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-600 text-xl">🔥</span>
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-orange-600 text-xl">🥘</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">Spicy Hot Pot</h3>
-                    <p className="text-gray-600">Private hot pot experience with local families</p>
+                    <h3 className="font-semibold text-gray-800">Bánh Xèo</h3>
+                    <p className="text-gray-600">Enjoy crispy Vietnamese pancake at a local favorite</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-yellow-600 text-xl">🍯</span>
+                    <span className="text-yellow-600 text-xl">🍚</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800">Artisan Desserts</h3>
-                    <p className="text-gray-600">Meet local dessert artisans and taste rare treats</p>
+                    <h3 className="font-semibold text-gray-800">Xôi Gà & Bún Bò Huế</h3>
+                    <p className="text-gray-600">Experience traditional Vietnamese chicken sticky rice and spicy beef noodle soup</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-green-600 text-xl">🍢</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800">Bò Lá Lốt</h3>
+                    <p className="text-gray-600">Taste grilled beef wrapped in aromatic betel leaves</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-blue-600 text-xl">🌆</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800">Rooftop Bar Experience</h3>
+                    <p className="text-gray-600">End your tour with drinks at a rooftop bar overlooking Saigon</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-yellow-600 text-xl">⭐</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800">Michelin Guide Restaurants</h3>
+                    <p className="text-gray-600">Experience Michelin-selected restaurants featuring exceptional Vietnamese cuisine</p>
                   </div>
                 </div>
               </div>
@@ -130,7 +169,7 @@ const PremiumStreetFood = () => {
                     value={bookingForm.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -145,7 +184,7 @@ const PremiumStreetFood = () => {
                     value={bookingForm.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -160,7 +199,7 @@ const PremiumStreetFood = () => {
                     value={bookingForm.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -175,7 +214,7 @@ const PremiumStreetFood = () => {
                     value={bookingForm.date}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
 
@@ -188,7 +227,7 @@ const PremiumStreetFood = () => {
                     value={bookingForm.guests}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   >
                     <option value={1}>1 Guest</option>
                     <option value={2}>2 Guests</option>
@@ -208,21 +247,39 @@ const PremiumStreetFood = () => {
                     value={bookingForm.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     placeholder="Any dietary restrictions or special requests?"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
+                  className="w-full bg-purple-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors"
                 >
-                  Book Premium Street Food Tour - $45
+                  Book Premium Street Food Tour - $59
                 </button>
+
+                {/* PayPal Payment */}
+                <div className="border-t pt-4">
+                  <p className="text-sm text-gray-600 mb-3 text-center">Or pay directly with PayPal:</p>
+                  <div className="flex justify-center">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                      <input type="hidden" name="cmd" value="_xclick" />
+                      <input type="hidden" name="business" value="thestoriesguys@gmail.com" />
+                      <input type="hidden" name="item_name" value="Premium Street Food Tour - $59 per person" />
+                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="amount" value="59.00" />
+                      <input type="hidden" name="return" value="https://saigonese-hangout.com/booking/success" />
+                      <input type="hidden" name="cancel_return" value="https://saigonese-hangout.com/booking/streetfood/premium" />
+                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+                      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                    </form>
+                  </div>
+                </div>
               </form>
 
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-blue-800">
+              <div className="mt-6 p-4 bg-purple-50 rounded-lg">
+                <p className="text-sm text-purple-800">
                   <strong>Free Cancellation:</strong> Cancel up to 24 hours before your tour for a full refund.
                 </p>
               </div>
